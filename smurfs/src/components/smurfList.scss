@@ -1,3 +1,14 @@
-span.meta{
-  margin-right: 3rem;
+.smurf-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+
+  .ui.card:first-child {
+    margin-top: 1em;
+  }
+}
+
+.ui.card:first-child {
+  margin-top: 1em;
 }

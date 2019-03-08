@@ -55,7 +55,7 @@ class SmurfsList extends Component {
 
     render() {
         return (
-            <div>
+            <div className={"smurf-list"}>
                 {this.props.smurfs.map((smurf) => {
                     return (
                         <Card key={smurf.id}>
