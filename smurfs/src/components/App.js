@@ -50,9 +50,10 @@ class App extends Component {
           <Header as='h2'>
             Smurfs
             <Header.Subheader>Build and manage your smurf village here.</Header.Subheader>
+            <Button onClick={this.changeSideBar}>Open/Close Add Smurf</Button>
           </Header>
           <SmurfsList/>
-          <Button onClick={this.changeSideBar}/>
+
           <Sidebar as={Segment} animation={"scale down"} direction={"right"} visible={this.state.visible}>
             <Grid textAlign='center'>
               <Grid.Row columns={1}>
