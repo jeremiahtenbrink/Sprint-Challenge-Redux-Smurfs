@@ -1,6 +1,9 @@
+const uuid4 = require("uuid4");
+
 const express = require('express');
 const cors = require('cors');
 const port = 3333;
+
 
 const server = express();
 server.use(express.json());
@@ -16,13 +19,14 @@ let smurfs = [
   {
     name: 'Brainey',
     age: 200,
-    height: '5cm'
+    height: '5cm',
+    id: uuid4()
   }
 ];
 server.get('/smurfs', (req, res) => {
   res.json(smurfs);
 });
-let smurfId = 0;
+let smurfId = uuid4();
 
 server.post('/smurfs', (req, res) => {
   const { name, age, height } = req.body;
@@ -44,7 +48,7 @@ server.post('/smurfs', (req, res) => {
   }
 
   smurfs.push(newSmurf);
-  smurfId++;
+  smurfId = uuid4();
   res.json(smurfs);
 });
 

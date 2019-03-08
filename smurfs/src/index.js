@@ -7,6 +7,7 @@ import logger from 'redux-logger';
 import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import smurfReducer from './reducers';
+import 'semantic-ui-css/semantic.min.css';
 
 const store = createStore(
     smurfReducer, // this is the most basic reducer. A function that returns and object. Replace it.
